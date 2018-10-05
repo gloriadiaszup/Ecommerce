@@ -11,8 +11,8 @@ public class Clientes {
 
     public Clientes(String nome, String telefone, String cpf, Logradouro endereço)
     {
-        this.nome=nome;
-        this.telefone=telefone;
+        this.nome = nome;
+        this.telefone = telefone;
         this.cpf=cpf;
         this.endereço=endereço;
     }
