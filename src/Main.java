@@ -1,26 +1,36 @@
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main (String[] args){
-           Loja loja = new Loja();
-           Produto mouse = new Produto("mouse", 65.00, "mouse sem fio", 15);
-           Produto teclado = new Produto ("teclado", 90.0, "teclado sem fio", 15);
 
-           loja.AdicionaProdutoEstoque(mouse);
-           loja.AdicionaProdutoEstoque(teclado);
+        Logradouro juliaendereço = new Logradouro("mato grosso", "alameda", "RS", "Porto Alegre", "38576384", 1192);
+        Clientes Julia = new Clientes ("Julia", "34998016787", "13144435643", juliaendereço);
 
-           Logradouro endereco = new Logradouro("mato grosso", "saraiva", "minas gerais", "uberlandia", "38408587", 1192);
-           Clientes gloria = new Clientes("Glória", "34998016709", "13144757627",endereco);
+        Loja loja = new Loja();
 
-           gloria.AdicionarAoCarrinho(mouse);
-           gloria.AdicionarAoCarrinho(teclado);
+        Produto camiseta_azul = new Produto("camiseta_azul", 30.00, "P", 15);
+        Produto camiseta_rosa = new Produto("camiseta rosa", 30.00, "M", 15);
+        Produto camiseta_verde = new Produto("camiseta verde", 30.00, "G", 15);
 
-           String gloriaCompra = gloria.Comprar();
-           gloria.RemoverDoCarrinho(mouse);
-
-           System.out.println(gloriaCompra);
-
-
+        Julia.adicionarAoCarrinho(Julia, camiseta_azul,10);
+        Julia.adicionarAoCarrinho(Julia, camiseta_rosa,5);
+        Julia.adicionarAoCarrinho(Julia, camiseta_verde,1);
+        loja.listadePedidos(Julia);
+        double frete = Julia.calculaFrete("38465786");
+        System.out.println("Valor da compra sem o frete: 480.0");
+        System.out.println("Valor do frete para o CEP: " +Julia.getEndereco().getCEP() +" = " +frete);
+        double preco = Julia.preçoTotalCompra();
+        System.out.println("Preço total da compra = " +preco);
+        StatusPedido status = Julia.getStatus_do_pedido();
+        Clientes julia = new Clientes ("Julia", "34998016787", "13144435643", juliaendereço);
+        Clientes[] cliente = new Clientes[100];
+        cliente =  loja.listadePedidos(julia);
+        System.out.println("Nome do cliente: "+cliente[1].getNome());
+        System.out.println(status);
+        Julia.comprar();
+        status = Julia.getStatus_do_pedido();
+        System.out.println(status);
+        Julia.pagar(560);
+        status = Julia.getStatus_do_pedido();
+        System.out.println(status);
     }
 }

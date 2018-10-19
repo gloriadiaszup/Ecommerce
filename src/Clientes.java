@@ -1,39 +1,52 @@
 import java.util.ArrayList;
 
-public class Clientes {
+    public class Clientes {
+
 
     private String nome;
     private String telefone;
-    private String cpf;
-    private Logradouro endereço;
+    private String email;
+    private Logradouro endereco;
     private ArrayList<Produto> comprados = new ArrayList<Produto>();
     private ArrayList<Produto> carrinho = new ArrayList<Produto>();
+    private StatusPedido status_do_pedido;
 
-    public Clientes(String nome, String telefone, String cpf, Logradouro endereço)
+    public Clientes(String nome, String telefone, String cpf, Logradouro endereco)
     {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.cpf=cpf;
-        this.endereço=endereço;
+        this.nome=nome;
+        this.telefone=telefone;
+        this.email=email;
+        this.endereco=endereco;
     }
 
-    public String Comprar()
-    {
-         StringBuilder compra= new StringBuilder();
-        for (Produto aCarrinho : carrinho) {
-            comprados.add(aCarrinho);
-            compra.append("Produto: ").append(aCarrinho.getNome()).append(" Valor: ").append(aCarrinho.getPreço()).append("::: ");
+        public Clientes(String nome, String telefone, String cpf, Logradouro endereco, ArrayList<Produto> carrinho, StatusPedido status_do_pedido)
+        {
+            this.nome=nome;
+            this.telefone=telefone;
+            this.email=email;
+            this.endereco=endereco;
+            this.status_do_pedido = getStatus_do_pedido();
         }
-       carrinho.clear();
-        return compra.toString();
-    }
 
-    public void AdicionarAoCarrinho(Produto produto)
+
+    public void adicionarAoCarrinho(Clientes cliente, Produto produto, int quantidade)
     {
-       carrinho.add(produto);
+
+        for(int i=0; i<quantidade;i++)
+
+            carrinho.add(produto);
+
+        if (carrinho.isEmpty()) {
+            setStatus_do_pedido(StatusPedido.VAZIO);
+        }
+        else
+        {
+            status_do_pedido = StatusPedido.AGUARDANDO_COMPRA;
+        }
+
     }
 
-    public void RemoverDoCarrinho(Produto produto)
+    public void removerDoCarrinho(Produto produto)
     {
        for (int i=0; i<carrinho.size(); i++){
            if (carrinho.get(i).equals(produto)){
@@ -41,6 +54,74 @@ public class Clientes {
            }
        }
     }
+        double preco_frete;
+    public double calculaFrete(String cep)
+    {
+        int P = 0;
+        int G = 0;
+        int M = 0;
+
+        int QuantP = 0;
+        int QuantM = 0;
+        if (cep == "38408587")
+        {
+            preco_frete = 0;
+        } else{
+            for(int i=0;i<carrinho.size();i++){
+                if(carrinho.get(i).getTamanho().equals("P"))
+                    P++;
+                if(carrinho.get(i).getTamanho().equals("M"))
+                    M++;
+                if(carrinho.get(i).getTamanho().equals("G"))
+                    G++;
+
+            }
+
+            QuantP = P/10;
+            P = P%10;
+            M += QuantP;
+            QuantM = M/5;
+            M = M%5;
+            G += QuantM;
+
+
+            preco_frete = (P*5) + (M*20) + (G*25);
+        }
+        return preco_frete;
+    }
+
+        public double preçoTotalCompra()
+        {
+            double valorTotal=0;
+
+            for (int i=0; i<carrinho.size(); i++)
+            {
+                valorTotal+= carrinho.get(i).getPreco();
+            }
+            valorTotal+= preco_frete;
+            carrinho.clear();
+            return valorTotal;
+        }
+
+        public void comprar()
+        {
+            System.out.println ("Compra efetuada com sucesso!");
+            setStatus_do_pedido(StatusPedido.AGUARDANDO_PAGAMENTO);
+        }
+
+        public void pagar(double dinheiro)
+        {
+            double preco=preçoTotalCompra();
+           if (preco <= dinheiro) {
+               System.out.println("Pagamento efetuado com sucesso!");
+             setStatus_do_pedido(StatusPedido.PAGAMENTO_EFETUADO);
+           } else if (preçoTotalCompra()<dinheiro)
+           {
+               System.out.println("Pagamento não autorizado");
+           }
+        }
+
+
 
     public ArrayList<Produto> getCarrinho()
     {
@@ -65,19 +146,29 @@ public class Clientes {
         return telefone;
     }
 
-    public String getCPF() {
-        return cpf;
+    public String getEmail() {
+        return email;
     }
 
-    public Logradouro getEndereço() {
-        return endereço;
+    public void setEmail (String email) { this.email=email;}
+
+    public Logradouro getEndereco() {
+        return endereco;
     }
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    public void setEndereço(Logradouro endereço) {
-        this.endereço = endereço;
+    public void setEndereco(Logradouro endereço) {
+        this.endereco = endereco;
     }
-}
+
+        public StatusPedido getStatus_do_pedido() {
+            return status_do_pedido;
+        }
+
+        public void setStatus_do_pedido(StatusPedido status_do_pedido) {
+            this.status_do_pedido = status_do_pedido;
+        }
+    }
