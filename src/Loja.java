@@ -10,13 +10,13 @@ public class Loja
     private ArrayList<Produto> estoque = new ArrayList<Produto>();
 
 
-    public void AdicionaProdutoEstoque(Produto produto)
+    public void adicionaProdutoEstoque(Produto produto)
 
     {
         estoque.add(produto);
     }
 
-    public void VendeProduto(Produto produto, int quantidade)
+    public void vendeProduto(Produto produto, int quantidade)
     {
         vendidos.add(produto);
         for(int i=0; i<=estoque.size(); i++)

@@ -13,7 +13,7 @@ public class Logradouro {
         this.Estado=Estado;
         this.Cidade=Cidade;
         this.CEP=CEP;
-        this.Numero=Numero;
+        this.Numero=Numero;     
        }
     public int getNumero() { return Numero; }
 

@@ -3,14 +3,14 @@ import java.util.ArrayList;
 public class Produto {
     private String nome;
     private double preço;
-    private String descrição;
+    private String tamanho;
     private int quantidade;
 
-    public Produto(String nome, double preço, String descrição, int quantidade)
+    public Produto(String nome, double preço, String tamanho, int quantidade)
     {
        this.nome=nome;
        this.preço=preço;
-       this.descrição=descrição;
+       this.tamanho=tamanho;
        this.quantidade=quantidade;
     }
 
@@ -38,11 +38,11 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-    public String getDescrição() {
-        return descrição;
+    public String getTamanho() {
+        return tamanho;
     }
 
-    public void setDescrição(String descrição) {
-        this.descrição = descrição;
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
     }
 }

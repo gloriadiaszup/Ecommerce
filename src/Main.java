@@ -3,24 +3,23 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main (String[] args){
-           Loja loja = new Loja();
-           Produto mouse = new Produto("mouse", 65.00, "mouse sem fio", 15);
-           Produto teclado = new Produto ("teclado", 90.0, "teclado sem fio", 15);
 
-           loja.AdicionaProdutoEstoque(mouse);
-           loja.AdicionaProdutoEstoque(teclado);
+        Logradouro juliaendereço = new Logradouro("mato grosso", "alameda", "RS", "Porto Alegre", "38576384", 1192);
+        Clientes Julia = new Clientes("julia", "34998016787", "13144435643", juliaendereço);
 
-           Logradouro endereco = new Logradouro("mato grosso", "saraiva", "minas gerais", "uberlandia", "38408587", 1192);
-           Clientes gloria = new Clientes("Glória", "34998016709", "13144757627",endereco);
+        Loja loja = new Loja();
 
-           gloria.AdicionarAoCarrinho(mouse);
-           gloria.AdicionarAoCarrinho(teclado);
+        Produto camiseta_azul = new Produto("camiseta_azul", 30.00, "P", 15);
+        Produto camiseta_rosa = new Produto("camiseta rosa", 30.00, "M", 15);
+        Produto camiseta_verde = new Produto("camiseta verde", 30.00, "G", 15);
 
-           String gloriaCompra = gloria.Comprar();
-           gloria.RemoverDoCarrinho(mouse);
+        Julia.adicionarAoCarrinho(camiseta_azul,10);
+        Julia.adicionarAoCarrinho(camiseta_rosa,5);
+        Julia.adicionarAoCarrinho(camiseta_verde,1);
 
-           System.out.println(gloriaCompra);
-
+        double frete = Julia.calculaFrete("38465786");
+        System.out.println(frete);
+        Julia.comprar();
 
     }
 }
