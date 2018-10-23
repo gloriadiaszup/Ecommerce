@@ -16,6 +16,8 @@ public class Main {
         Julia.adicionarAoCarrinho(camiseta_azul,10);
         Julia.adicionarAoCarrinho(camiseta_rosa,5);
         Julia.adicionarAoCarrinho(camiseta_verde,1);
+        Julia.removerDoCarrinho(camiseta_verde);
+
 
         double frete = Julia.calculaFrete("38465786");
         System.out.println(frete);

@@ -8,7 +8,7 @@ public class Clientes {
     private Logradouro endereço;
     private ArrayList<Produto> comprados = new ArrayList<Produto>();
     private ArrayList<Produto> carrinho = new ArrayList<Produto>();
-
+    public static final String cep_loja = "38408587";
     public Clientes(String nome, String telefone, String cpf, Logradouro endereço)
     {
         this.nome=nome;
@@ -42,8 +42,8 @@ public class Clientes {
     public void removerDoCarrinho(Produto produto)
     {
        for (int i=0; i<carrinho.size(); i++){
-           if (carrinho.get(i).equals(produto)){
-               carrinho.remove(produto);
+           if (carrinho.get(i)==produto){
+               carrinho.remove(i);
            }
        }
     }
@@ -56,7 +56,7 @@ public class Clientes {
         int QuantP = 0;
         int QuantM = 0;
         double preco_frete;
-        if (cep == "38408587")
+        if (cep == cep_loja)
         {
             preco_frete = 0;
         } else{
@@ -71,7 +71,8 @@ public class Clientes {
             }
 
             QuantP = P/10;
-            P = P%10;
+            if (P%10>0)
+            P++;
             M += QuantP;
             QuantM = M/5;
             M = M%5;
