@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="715bdc21-50c3-40df-b67d-c392d046b1dd" name="Default Changelist" comment="" />
-    <list id="6f2c9746-394a-4b00-9448-53ee13aefda5" name="calculo de frete de carrinho" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="715bdc21-50c3-40df-b67d-c392d046b1dd" name="Default Changelist" comment="calculo de frete de carrinho">
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projeto-Backend" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Projeto-Backend/Clientes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Projeto-Backend/Logradouro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Projeto-Backend/Loja.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Projeto-Backend/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Projeto-Backend/Produto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logradouro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logradouro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Loja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JPanel.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,29 +26,31 @@
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.62" value="1" />
+          <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="groovy" value="1" />
-          <entry key="java" value="37" />
+          <entry key="java" value="48" />
           <entry key="md" value="1" />
           <entry key="patch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="37" />
+          <entry key="JAVA" value="48" />
           <entry key="Markdown" value="1" />
           <entry key="PATCH" value="1" />
           <entry key="Scratch" value="1" />
@@ -72,26 +59,27 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="11243" />
-          <entry key="txt" value="46" />
+          <entry key="txt" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="11243" />
-          <entry key="PLAIN_TEXT" value="46" />
+          <entry key="PLAIN_TEXT" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.local" value="6" />
+          <entry key="git.branch.checkout.local" value="11" />
           <entry key="git.branch.checkout.remote" value="4" />
           <entry key="git.branch.checkout.with.rebase" value="3" />
           <entry key="git.branch.compare" value="2" />
-          <entry key="git.branch.create.new" value="3" />
-          <entry key="git.branch.delete.local" value="2" />
+          <entry key="git.branch.create.new" value="4" />
+          <entry key="git.branch.delete.local" value="3" />
+          <entry key="git.branch.delete.remote" value="1" />
           <entry key="git.branch.merge" value="2" />
-          <entry key="git.branch.rename" value="2" />
+          <entry key="git.branch.rename" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -101,15 +89,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Produto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -118,33 +97,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Clientes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-              <folding>
-                <element signature="e#223#232#0" expanded="true" />
-                <element signature="e#291#300#0" expanded="true" />
-                <element signature="e#2458#2459#0" expanded="true" />
-                <element signature="e#2487#2488#0" expanded="true" />
-                <element signature="e#2551#2552#0" expanded="true" />
-                <element signature="e#2591#2592#0" expanded="true" />
-                <element signature="e#2657#2658#0" expanded="true" />
-                <element signature="e#2699#2700#0" expanded="true" />
-                <element signature="e#2730#2731#0" expanded="true" />
-                <element signature="e#2757#2758#0" expanded="true" />
-                <element signature="e#2792#2793#0" expanded="true" />
-                <element signature="e#2823#2824#0" expanded="true" />
-                <element signature="e#2855#2856#0" expanded="true" />
-                <element signature="e#2883#2884#0" expanded="true" />
-                <element signature="e#1715#1716#0" expanded="true" />
-                <element signature="e#1746#1747#0" expanded="true" />
-                <element signature="e#1794#1795#0" expanded="true" />
-                <element signature="e#1834#1835#0" expanded="true" />
-                <element signature="e#1886#1887#0" expanded="true" />
-                <element signature="e#1926#1927#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -239,10 +205,11 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,14 +226,23 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Projeto-Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Projeto-Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539983789749" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540239450633" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JogoInicio-java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -336,7 +312,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="715bdc21-50c3-40df-b67d-c392d046b1dd" name="Default Changelist" comment="" />
-      <changelist id="6f2c9746-394a-4b00-9448-53ee13aefda5" name="calculo de frete de carrinho" comment="" />
       <created>1538423307848</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -355,7 +330,9 @@
       <workItem from="1539885280013" duration="2896000" />
       <workItem from="1539906563443" duration="2399000" />
       <workItem from="1539953483836" duration="11776000" />
-      <workItem from="1539972003003" duration="4880000" />
+      <workItem from="1539972003003" duration="5242000" />
+      <workItem from="1540233386003" duration="2068000" />
+      <workItem from="1540316695848" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="organização de diretorios">
       <created>1539973600765</created>
@@ -371,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539974096106</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="calculo de frete de carrinho">
+      <created>1539983849258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539983849258</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -395,7 +379,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73164000" />
+    <option name="totallyTimeSpent" value="75921000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -410,7 +394,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32753405" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3290469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -427,7 +411,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32879046" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.32879046" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49924356" visible="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" sideWeight="0.49924356" weight="0.32879046" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49924356" weight="0.32879046" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -510,7 +494,8 @@
     </ignored-roots>
     <MESSAGE value="organização de diretorios" />
     <MESSAGE value="criação de pedidos" />
-    <option name="LAST_COMMIT_MESSAGE" value="criação de pedidos" />
+    <MESSAGE value="calculo de frete de carrinho" />
+    <option name="LAST_COMMIT_MESSAGE" value="calculo de frete de carrinho" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -542,7 +527,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Janela.java" />
     <entry file="file://$PROJECT_DIR$/src/CarrinhoVirtual.java" />
-    <entry file="file://$PROJECT_DIR$/src/JPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/Frete.java" />
     <entry file="file://$PROJECT_DIR$/../zup/Ecommerce/Projeto-Backend/src/Clientes.java" />
     <entry file="file://$PROJECT_DIR$/Projeto-Backend/Projeto-Backend/src/Main.java" />
@@ -556,13 +540,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pedidos.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logradouro.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -574,33 +551,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clientes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/calculo_de_frete_de_carrinho.patch" />
+    <entry file="file://$PROJECT_DIR$/src/JPanel.java" />
     <entry file="file://$PROJECT_DIR$/../JogoInicio-java/src/jogoinicio/cursor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="170">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -611,6 +570,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/StatusPedido.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -618,35 +584,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculo_de_frete_de_carrinho.patch">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clientes.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="e#223#232#0" expanded="true" />
-            <element signature="e#291#300#0" expanded="true" />
-            <element signature="e#2458#2459#0" expanded="true" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2551#2552#0" expanded="true" />
-            <element signature="e#2591#2592#0" expanded="true" />
-            <element signature="e#2657#2658#0" expanded="true" />
-            <element signature="e#2699#2700#0" expanded="true" />
-            <element signature="e#2730#2731#0" expanded="true" />
-            <element signature="e#2757#2758#0" expanded="true" />
-            <element signature="e#2792#2793#0" expanded="true" />
-            <element signature="e#2823#2824#0" expanded="true" />
-            <element signature="e#2855#2856#0" expanded="true" />
-            <element signature="e#2883#2884#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
-            <element signature="e#1746#1747#0" expanded="true" />
-            <element signature="e#1794#1795#0" expanded="true" />
-            <element signature="e#1834#1835#0" expanded="true" />
-            <element signature="e#1886#1887#0" expanded="true" />
-            <element signature="e#1926#1927#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="219">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
