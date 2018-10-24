@@ -34,8 +34,8 @@ public class Clientes {
 
     public void adicionarAoCarrinho(Produto produto, int quantidade)
     {
-        //TODO:Aqui você ddeverá fazer uma validação para saber se existe essa quantidade em estoque
-        for(int i=0; i<quantidade;i++)
+
+        for(int i=1; i<=quantidade;i++)
             carrinho.add(produto);
     }
 
@@ -61,25 +61,31 @@ public class Clientes {
             preco_frete = 0;
         } else{
             for(int i=0;i<carrinho.size();i++){
-                if(carrinho.get(i).getTamanho().equals("P"))
+                if(carrinho.get(i).getTamanho()=="P")
                     P++;
-                if(carrinho.get(i).getTamanho().equals("M"))
+                if(carrinho.get(i).getTamanho()=="M")
                     M++;
-                if(carrinho.get(i).getTamanho().equals("G"))
+                if(carrinho.get(i).getTamanho()=="G")
                     G++;
 
             }
-
-            QuantP = P/10;
+            System.out.println(P);
+            System.out.println(M);
+            System.out.println(G);
             if (P%10>0)
-            P++;
-            M += QuantP;
-            QuantM = M/5;
-            M = M%5;
-            G += QuantM;
+           QuantP = 1;
+            else
+           QuantP = 0;
+
+            if (M%5>0)
+           QuantM = P/10;
+            else
+           QuantM = P/10+M%5;
+
+           G=M/5+G;
 
 
-            preco_frete = (P*5) + (M*20) + (G*25);
+            preco_frete = (QuantP*5) + (QuantM*20) + (G*25);
         }
         return preco_frete;
     }
