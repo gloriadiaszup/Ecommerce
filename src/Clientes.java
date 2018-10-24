@@ -55,40 +55,6 @@ import java.util.ArrayList;
        }
     }
         double preco_frete;
-    public double calculaFrete(String cep)
-    {
-        int P = 0;
-        int G = 0;
-        int M = 0;
-
-        int QuantP = 0;
-        int QuantM = 0;
-        if (cep == "38408587")
-        {
-            preco_frete = 0;
-        } else{
-            for(int i=0;i<carrinho.size();i++){
-                if(carrinho.get(i).getTamanho().equals("P"))
-                    P++;
-                if(carrinho.get(i).getTamanho().equals("M"))
-                    M++;
-                if(carrinho.get(i).getTamanho().equals("G"))
-                    G++;
-
-            }
-
-            QuantP = P/10;
-            P = P%10;
-            M += QuantP;
-            QuantM = M/5;
-            M = M%5;
-            G += QuantM;
-
-
-            preco_frete = (P*5) + (M*20) + (G*25);
-        }
-        return preco_frete;
-    }
 
         public double preçoTotalCompra()
         {

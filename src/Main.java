@@ -15,9 +15,7 @@ public class Main {
         Julia.adicionarAoCarrinho(Julia, camiseta_rosa,5);
         Julia.adicionarAoCarrinho(Julia, camiseta_verde,1);
         loja.listadePedidos(Julia);
-        double frete = Julia.calculaFrete("38465786");
-        System.out.println("Valor da compra sem o frete: 480.0");
-        System.out.println("Valor do frete para o CEP: " +Julia.getEndereco().getCEP() +" = " +frete);
+
         double preco = Julia.preçoTotalCompra();
         System.out.println("Preço total da compra = " +preco);
         StatusPedido status = Julia.getStatus_do_pedido();
