@@ -14,21 +14,6 @@ public class Main {
         Julia.adicionarAoCarrinho(Julia, camiseta_azul,10);
         Julia.adicionarAoCarrinho(Julia, camiseta_rosa,5);
         Julia.adicionarAoCarrinho(Julia, camiseta_verde,1);
-        loja.listadePedidos(Julia);
 
-        double preco = Julia.preçoTotalCompra();
-        System.out.println("Preço total da compra = " +preco);
-        StatusPedido status = Julia.getStatus_do_pedido();
-        Clientes julia = new Clientes ("Julia", "34998016787", "13144435643", juliaendereço);
-        Clientes[] cliente = new Clientes[100];
-        cliente =  loja.listadePedidos(julia);
-        System.out.println("Nome do cliente: "+cliente[1].getNome());
-        System.out.println(status);
-        Julia.comprar();
-        status = Julia.getStatus_do_pedido();
-        System.out.println(status);
-        Julia.pagar(560);
-        status = Julia.getStatus_do_pedido();
-        System.out.println(status);
     }
 }

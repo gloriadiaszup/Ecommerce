@@ -22,7 +22,7 @@ public class Loja
         vendidos.add(produto);
         for(int i=0; i<=estoque.size(); i++)
         {
-           if(estoque.get(i).equals(produto))
+           if(estoque.get(i)==produto)
            {
                produto.setQuantidade(produto.getQuantidade()-quantidade);
            }
@@ -33,22 +33,22 @@ public class Loja
     {
         for(int i=0; i<=estoque.size(); i++)
         {
-            if(estoque.get(i).equals(produto))
+            if(estoque.get(i)==produto)
             {
                 produto.setQuantidade(produto.getQuantidade()+quantidade);
             }
         }
     }
-    static int id = 0;
 
-    public Clientes[] listadePedidos(Clientes clientes)
+    public Clientes[] listadePedidos(int codigo, String nome, ArrayList<Pedido> pedidos)
     {
 
         Clientes[] cliente = new Clientes[500];
 
-        cliente[id]= new Clientes(clientes.getNome(), clientes.getTelefone(), clientes.getEmail(), clientes.getEndereco(), clientes.getCarrinho(), clientes.getStatus_do_pedido());
-         id++;
-         return  cliente;
+        cliente[codigo]= new Clientes(nome, pedidos);
+         codigo++;
+
+          return cliente;
     }
 
 
