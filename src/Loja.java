@@ -8,6 +8,8 @@ public class Loja
 
     private ArrayList<Produto> vendidos = new ArrayList<Produto>();
     private ArrayList<Produto> estoque = new ArrayList<Produto>();
+    private ArrayList<Client> clientList = new ArrayList<Client>();
+
 
     private static  int i= 0;
 
@@ -40,16 +42,10 @@ public class Loja
         }
     }
 
-    public Clientes[] listadePedidos(int codigo, String nome, ArrayList<Pedido> pedidos)
-    {
+    public void cadastraCliente(Client cliente){
 
-        Clientes[] cliente = new Clientes[500];
-
-        cliente[codigo]= new Clientes(nome, pedidos);
-         codigo++;
-
-          return cliente;
+        clientList.add(cliente);
     }
 
+   }
 
-}

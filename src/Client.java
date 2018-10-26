@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-    public class Clientes {
+    public class Client {
 
 
         private String nome;
@@ -12,21 +12,22 @@ import java.util.ArrayList;
         private ArrayList<Pedido> pedidos = new ArrayList <Pedido>();
 
 
-        public Clientes(String nome, String telefone, String cpf, Logradouro endereco) {
+        public Client(String nome, String telefone, String cpf, Logradouro endereco) {
             this.nome = nome;
             this.telefone = telefone;
             this.email = email;
             this.endereco = endereco;
         }
 
-        public Clientes (String nome, ArrayList<Pedido> pedidos)
+        public Client(String nome, ArrayList<Pedido> pedidos)
         {
             this.nome = nome;
             this.pedidos = pedidos;
         }
 
 
-        public void adicionarAoCarrinho(Clientes cliente, Produto produto, int quantidade) {
+        public void adicionarAoCarrinho(Produto produto, int quantidade) {
+
 
             for (int i = 0; i < quantidade; i++)
 
@@ -53,14 +54,15 @@ import java.util.ArrayList;
             carrinho.clear();
             return valorTotal;
         }
-        static private int codigo=1;
+        static private int codigo=0;
 
         public void comprar() {
 
-            Pedido pedido = new Pedido(nome, carrinho, StatusPedido.AGUARDANDO_PAGAMENTO);
-            pedidos.add(codigo, pedido); codigo++;
-            Loja loja = new Loja();
-            loja.listadePedidos(codigo, nome, pedidos);
+            Pedido pedido = new Pedido(carrinho, StatusPedido.AGUARDANDO_PAGAMENTO);
+            pedidos.add(pedido);
+            for (int i=0; i<carrinho.size(); i++){
+                carrinho.remove(i);
+            }
             System.out.println("Compra efetuada com sucesso, aguardando pagamento!");
         }
 
@@ -69,6 +71,8 @@ import java.util.ArrayList;
             if (preco <= dinheiro) {
                 System.out.println("Pagamento efetuado com sucesso!");
                 pedidos.get(codigo_do_pedido).setStatus(StatusPedido.PAGAMENTO_EFETUADO);
+                for(int i=0; i<carrinho.size(); i++)
+                    comprados=carrinho;
                 for(int i=0; i<carrinho.size(); i++)
                     carrinho.remove(i);
             } else if (preçoTotalCompra() < dinheiro) {
@@ -122,6 +126,10 @@ import java.util.ArrayList;
 
         public void setPedidos(ArrayList <Pedido> pedidos) {
             this.pedidos = pedidos;
+        }
+
+        public ArrayList <Produto> getComprados() {
+            return comprados;
         }
     }
 
