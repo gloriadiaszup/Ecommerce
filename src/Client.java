@@ -56,7 +56,7 @@ import java.util.ArrayList;
 
         public void comprar() {
 
-            Pedido pedido = new Pedido((ArrayList<Produto>) carrinho.clone(), StatusPedido.AGUARDANDO_PAGAMENTO);
+            Pedido pedido = new Pedido(carrinho, StatusPedido.AGUARDANDO_PAGAMENTO);
             pedidos.add(pedido);
             System.out.println("Aguardando pagamento!");
         }

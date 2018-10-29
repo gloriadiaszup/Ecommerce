@@ -7,7 +7,7 @@ public class Pedido {
 
     public Pedido( ArrayList<Produto> produtos, StatusPedido status) {
 
-        this.produtos = produtos;
+        this.produtos = (ArrayList<Produto>) produtos.clone();
         this.status = status;
     }
 
