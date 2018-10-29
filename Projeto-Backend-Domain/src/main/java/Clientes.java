@@ -17,30 +17,7 @@ public class Clientes {
         this.endereço=endereço;
     }
 
-    public String Comprar()
-    {
-         StringBuilder compra= new StringBuilder();
-        for (Produto aCarrinho : carrinho) {
-            comprados.add(aCarrinho);
-            compra.append("Produto: ").append(aCarrinho.getNome()).append(" Valor: ").append(aCarrinho.getPreço()).append("::: ");
-        }
-       carrinho.clear();
-        return compra.toString();
-    }
 
-    public void AdicionarAoCarrinho(Produto produto)
-    {
-       carrinho.add(produto);
-    }
-
-    public void RemoverDoCarrinho(Produto produto)
-    {
-       for (int i=0; i<carrinho.size(); i++){
-           if (carrinho.get(i).equals(produto)){
-               carrinho.remove(produto);
-           }
-       }
-    }
 
     public ArrayList<Produto> getCarrinho()
     {
@@ -79,5 +56,21 @@ public class Clientes {
 
     public void setEndereço(Logradouro endereço) {
         this.endereço = endereço;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public ArrayList <Produto> getComprados() {
+        return comprados;
     }
 }
