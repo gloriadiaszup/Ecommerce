@@ -11,8 +11,6 @@ public class Loja
     private ArrayList<Client> clientList = new ArrayList<Client>();
 
 
-    private static  int i= 0;
-
     public void AdicionaProdutoEstoque(Produto produto)
 
     {
