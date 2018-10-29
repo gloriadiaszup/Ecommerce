@@ -16,11 +16,13 @@ public class Main {
         loja.cadastraCliente(Julia);
 
 
-        Julia.adicionarAoCarrinho( camiseta_azul,1);
+        Julia.adicionarAoCarrinho( camiseta_azul,2);
         Julia.adicionarAoCarrinho(camiseta_rosa,1);
         Julia.adicionarAoCarrinho(camiseta_verde,1);
+        double frete = Julia.calculaFrete("384025448");
+        System.out.println(frete);
 
-        System.out.println(Julia.preçoTotalCompra());
+
         Julia.comprar();
         Julia.pagar(0, 480.00);
 
