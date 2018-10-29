@@ -8,7 +8,10 @@ public class Loja
 
     private ArrayList<Produto> vendidos = new ArrayList<Produto>();
     private ArrayList<Produto> estoque = new ArrayList<Produto>();
+    private ArrayList<Client> clientList = new ArrayList<Client>();
 
+
+    private static  int i= 0;
 
     public void AdicionaProdutoEstoque(Produto produto)
 
@@ -21,23 +24,28 @@ public class Loja
         vendidos.add(produto);
         for(int i=0; i<=estoque.size(); i++)
         {
-           if(estoque.get(i).equals(produto))
+           if(estoque.get(i)==produto)
            {
                produto.setQuantidade(produto.getQuantidade()-quantidade);
            }
         }
     }
 
-    public void AdicionaEmEstoque(Produto produto, int quantidade)
+    public void adicionaEmEstoque(Produto produto, int quantidade)
     {
         for(int i=0; i<=estoque.size(); i++)
         {
-            if(estoque.get(i).equals(produto))
+            if(estoque.get(i)==produto)
             {
                 produto.setQuantidade(produto.getQuantidade()+quantidade);
             }
         }
     }
 
+    public void cadastraCliente(Client cliente){
 
-}
+        clientList.add(cliente);
+    }
+
+   }
+

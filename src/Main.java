@@ -1,26 +1,30 @@
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main (String[] args){
-           Loja loja = new Loja();
-           Produto mouse = new Produto("mouse", 65.00, "mouse sem fio", 15);
-           Produto teclado = new Produto ("teclado", 90.0, "teclado sem fio", 15);
 
-           loja.AdicionaProdutoEstoque(mouse);
-           loja.AdicionaProdutoEstoque(teclado);
+        Loja loja = new Loja();
 
-           Logradouro endereco = new Logradouro("mato grosso", "saraiva", "minas gerais", "uberlandia", "38408587", 1192);
-           Clientes gloria = new Clientes("Glória", "34998016709", "13144757627",endereco);
+        Produto camiseta_azul = new Produto("camiseta_azul", 30.00, "P", 15);
+        Produto camiseta_rosa = new Produto("camiseta rosa", 30.00, "M", 15);
+        Produto camiseta_verde = new Produto("camiseta verde", 30.00, "G", 15);
 
-           gloria.AdicionarAoCarrinho(mouse);
-           gloria.AdicionarAoCarrinho(teclado);
+        loja.AdicionaProdutoEstoque(camiseta_azul);
 
-           String gloriaCompra = gloria.Comprar();
-           gloria.RemoverDoCarrinho(mouse);
+        Logradouro juliaendereço = new Logradouro("mato grosso", "alameda", "RS", "Porto Alegre", "38576384", 1192);
+        Client Julia = new Client("Julia", "34998016787", "13144435643", juliaendereço);
 
-           System.out.println(gloriaCompra);
+        loja.cadastraCliente(Julia);
 
 
+        Julia.adicionarAoCarrinho( camiseta_azul,1);
+        Julia.adicionarAoCarrinho(camiseta_rosa,1);
+        Julia.adicionarAoCarrinho(camiseta_verde,1);
+
+        System.out.println(Julia.preçoTotalCompra());
+        Julia.comprar();
+        Julia.pagar(0, 480.00);
+
+
+        System.out.println(Julia.getPedidos().get(0).getProdutos());
     }
 }
