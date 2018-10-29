@@ -7,7 +7,6 @@ import java.util.ArrayList;
         private String telefone;
         private String email;
         private Logradouro endereco;
-        private ArrayList<Produto> comprados = new ArrayList<Produto>();
         private ArrayList<Produto> carrinho = new ArrayList<Produto>();
         private ArrayList<Pedido> pedidos = new ArrayList <Pedido>();
 
@@ -51,19 +50,15 @@ import java.util.ArrayList;
                 valorTotal += carrinho.get(i).getPreco();
             }
             valorTotal += preco_frete;
-            carrinho.clear();
             return valorTotal;
         }
         static private int codigo=0;
 
         public void comprar() {
 
-            Pedido pedido = new Pedido(carrinho, StatusPedido.AGUARDANDO_PAGAMENTO);
+            Pedido pedido = new Pedido((ArrayList<Produto>) carrinho.clone(), StatusPedido.AGUARDANDO_PAGAMENTO);
             pedidos.add(pedido);
-            for (int i=0; i<carrinho.size(); i++){
-                carrinho.remove(i);
-            }
-            System.out.println("Compra efetuada com sucesso, aguardando pagamento!");
+            System.out.println("Aguardando pagamento!");
         }
 
         public void pagar(int codigo_do_pedido, double dinheiro) {
@@ -71,10 +66,7 @@ import java.util.ArrayList;
             if (preco <= dinheiro) {
                 System.out.println("Pagamento efetuado com sucesso!");
                 pedidos.get(codigo_do_pedido).setStatus(StatusPedido.PAGAMENTO_EFETUADO);
-                for(int i=0; i<carrinho.size(); i++)
-                    comprados=carrinho;
-                for(int i=0; i<carrinho.size(); i++)
-                    carrinho.remove(i);
+                    carrinho.clear();
             } else if (preçoTotalCompra() < dinheiro) {
                 System.out.println("Pagamento não autorizado");
             }
@@ -87,10 +79,6 @@ import java.util.ArrayList;
 
         public void setCarrinho(ArrayList<Produto> carrinho) {
             this.carrinho = carrinho;
-        }
-
-        public void setComprados(ArrayList<Produto> comprados) {
-            this.comprados = comprados;
         }
 
         public String getNome() {
@@ -128,8 +116,14 @@ import java.util.ArrayList;
             this.pedidos = pedidos;
         }
 
-        public ArrayList <Produto> getComprados() {
-            return comprados;
-        }
+        public double getPreco_frete() { return preco_frete; }
+
+        public static int getCodigo() { return codigo; }
+
+        public void setNome(String nome) { this.nome = nome; }
+
+        public void setPreco_frete(double preco_frete) { this.preco_frete = preco_frete; }
+
+        public static void setCodigo(int codigo) { Client.codigo = codigo; }
     }
 

@@ -16,13 +16,15 @@ public class Main {
         loja.cadastraCliente(Julia);
 
 
-        Julia.adicionarAoCarrinho( camiseta_azul,10);
-        Julia.adicionarAoCarrinho(camiseta_rosa,5);
+        Julia.adicionarAoCarrinho( camiseta_azul,1);
+        Julia.adicionarAoCarrinho(camiseta_rosa,1);
         Julia.adicionarAoCarrinho(camiseta_verde,1);
 
         System.out.println(Julia.preçoTotalCompra());
         Julia.comprar();
         Julia.pagar(0, 480.00);
 
+
+        System.out.println(Julia.getPedidos().get(0).getProdutos());
     }
 }
