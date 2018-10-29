@@ -48,8 +48,9 @@ import java.util.ArrayList;
             int G = 0;
             int M = 0;
 
-            int QuantP = 0;
-            int QuantM = 0;
+            int caixaP = 0;
+            int caixaM = 0;
+            int caixaG = 0;
             double preco_frete;
             if (cep == cep_loja)
             {
@@ -64,23 +65,22 @@ import java.util.ArrayList;
                         G++;
 
                 }
-                System.out.println(P);
-                System.out.println(M);
-                System.out.println(G);
-                if (P%10>0)
-                    QuantP = 1;
-                else
-                    QuantP = 0;
+                if (P%10==0 && P/10==0)
+                    caixaP=0;
+                else if (P%10>0){
+                    caixaP=1;
+                    caixaM=P/10;
+                }
+                if (M%5==0 && M/5==0)
+                    caixaM+=0;
+                else if (M%5>0) {
+                    caixaM = 1;
+                    caixaG = M/5;
+                }
+                caixaG+=G;
 
-                if (M%5>0)
-                    QuantM = P/10;
-                else
-                    QuantM = P/10+M%5;
 
-                G=M/5+G;
-
-
-                preco_frete = (QuantP*5) + (QuantM*20) + (G*25);
+                preco_frete = (caixaP*5) + (caixaM*20) + (caixaG*25);
             }
             return preco_frete;
         }
