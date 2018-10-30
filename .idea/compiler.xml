@@ -11,9 +11,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Projeto-Backend" target="1.8" />
-      <module name="Projeto-Backend-Domain" target="1.8" />
-      <module name="Projeto-Backend-Services" target="1.8" />
+      <module name="Projeto-Backend" target="1.5" />
+      <module name="Projeto-Backend-Domain" target="1.5" />
+      <module name="Projeto-Backend-Services" target="1.5" />
       <module name="ProjetoBackendDomain" target="1.8" />
       <module name="ProjetoBackendServices" target="1.8" />
     </bytecodeTargetLevel>
