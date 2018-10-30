@@ -69,11 +69,9 @@ import java.util.ArrayList;
                     caixaP=0;
                 else if (P%10>0){
                     caixaP=1;
-                    caixaM=P/10;
+                    M+=P/10;
                 }
-                if (M%5==0 && M/5==0)
-                    caixaM+=0;
-                else if (M%5>0) {
+                if (M%5>0) {
                     caixaM = 1;
                     caixaG = M/5;
                 }

@@ -16,9 +16,9 @@ public class Main {
         loja.cadastraCliente(Julia);
 
 
-        Julia.adicionarAoCarrinho( camiseta_azul,150);
-        Julia.adicionarAoCarrinho(camiseta_rosa,31);
-        Julia.adicionarAoCarrinho(camiseta_verde,4);
+        Julia.adicionarAoCarrinho( camiseta_azul,13);
+        Julia.adicionarAoCarrinho(camiseta_rosa,6);
+        Julia.adicionarAoCarrinho(camiseta_verde,1);
         double frete = Julia.calculaFrete("384025448");
         System.out.println(frete);
 
