@@ -9,6 +9,7 @@ import java.util.ArrayList;
         private Logradouro endereco;
         private ArrayList<Produto> carrinho = new ArrayList<Produto>();
         private ArrayList<Pedido> pedidos = new ArrayList <Pedido>();
+        public static final String cep_loja = "38408587";
 
 
         public Client(String nome, String telefone, String cpf, Logradouro endereco) {
@@ -39,6 +40,47 @@ import java.util.ArrayList;
                     carrinho.remove(produto);
                 }
             }
+        }
+
+        public double calculaFrete(String cep)
+        {
+            int P = 0;
+            int G = 0;
+            int M = 0;
+
+            int caixaP = 0;
+            int caixaM = 0;
+            int caixaG = 0;
+            double preco_frete;
+            if (cep == cep_loja)
+            {
+                preco_frete = 0;
+            } else{
+                for(int i=0;i<carrinho.size();i++){
+                    if(carrinho.get(i).getTamanho()=="P")
+                        P++;
+                    if(carrinho.get(i).getTamanho()=="M")
+                        M++;
+                    if(carrinho.get(i).getTamanho()=="G")
+                        G++;
+
+                }
+                if (P%10==0 && P/10==0)
+                    caixaP=0;
+                else if (P%10>0){
+                    caixaP=1;
+                    M+=P/10;
+                }
+                if (M%5>0) {
+                    caixaM = 1;
+                    caixaG = M/5;
+                }
+                caixaG+=G;
+
+
+                preco_frete = (caixaP*5) + (caixaM*20) + (caixaG*25);
+            }
+            return preco_frete;
         }
 
         double preco_frete;
