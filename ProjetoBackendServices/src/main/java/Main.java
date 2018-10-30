@@ -11,16 +11,11 @@ public class Main {
            lojaService.AdicionaProdutoEstoque(loja, teclado);
 
            Logradouro endereco = new Logradouro("mato grosso", "saraiva", "minas gerais", "uberlandia", "38408587", 1192);
-           Clientes gloria = new Clientes("Glória", "34998016709", "13144757627", endereco);
+           Client gloria = new Client("Glória", "34998016709", "13144757627", endereco);
 
            ClientesService gloriaService = new ClientesService();
-           gloriaService.AdicionarAoCarrinho(gloria, mouse);
-           gloriaService.AdicionarAoCarrinho(gloria, teclado);
-
-           String gloriaCompra = gloriaService.Comprar(gloria);
-           gloriaService.RemoverDoCarrinho(gloria, mouse);
-
-           System.out.println(gloriaCompra);
+           gloriaService.adicionarAoCarrinho(gloria, mouse, 1);
+           gloriaService.adicionarAoCarrinho(gloria, teclado, 1);
 
     }
 }
