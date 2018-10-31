@@ -6,10 +6,8 @@ public class Loja
     private String cnpj="989.556.567/0001-35";
     private Logradouro endereco=new Logradouro("Emidia Saraiva", "Carajas", "Minas Gerais", "Uberlândia", "38408587", 77);
 
-    private ArrayList<Produto> vendidos = new ArrayList<Produto>();
-    private ArrayList<Produto> estoque = new ArrayList<Produto>();
-    private ArrayList<Client> clientList = new ArrayList<Client>();
-
+    private ArrayList<Produto> vendidos = new ArrayList<>();
+    private ArrayList<Produto> estoque = new ArrayList<>();
 
     public void AdicionaProdutoEstoque(Produto produto)
 
@@ -39,10 +37,10 @@ public class Loja
             }
         }
     }
-
-    public void cadastraCliente(Client cliente){
-
-        clientList.add(cliente);
+    public void teste(){
+        for(Produto test:vendidos){
+            System.out.println();
+        }
     }
 
    }

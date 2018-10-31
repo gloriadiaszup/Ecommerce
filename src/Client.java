@@ -7,12 +7,12 @@ import java.util.ArrayList;
         private String telefone;
         private String email;
         private Logradouro endereco;
-        private ArrayList<Produto> carrinho = new ArrayList<Produto>();
-        private ArrayList<Pedido> pedidos = new ArrayList <Pedido>();
+        private ArrayList<Produto> carrinho = new ArrayList<>();
+        private ArrayList<Pedido> pedidos = new ArrayList<>();
         public static final String cep_loja = "38408587";
 
 
-        public Client(String nome, String telefone, String cpf, Logradouro endereco) {
+        public Client(String nome, String telefone, String email, Logradouro endereco) {
             this.nome = nome;
             this.telefone = telefone;
             this.email = email;
@@ -48,26 +48,24 @@ import java.util.ArrayList;
             int G = 0;
             int M = 0;
 
-            int caixaP = 0;
+            int caixaP=0;
             int caixaM = 0;
             int caixaG = 0;
             double preco_frete;
-            if (cep == cep_loja)
+            if (cep.equals(cep_loja))
             {
                 preco_frete = 0;
             } else{
-                for(int i=0;i<carrinho.size();i++){
-                    if(carrinho.get(i).getTamanho()=="P")
+                for (Produto aCarrinho : carrinho) {
+                    if (aCarrinho.getTamanho().equals("P"))
                         P++;
-                    if(carrinho.get(i).getTamanho()=="M")
+                    if (aCarrinho.getTamanho().equals("M"))
                         M++;
-                    if(carrinho.get(i).getTamanho()=="G")
+                    if (aCarrinho.getTamanho().equals("G"))
                         G++;
 
                 }
-                if (P%10==0 && P/10==0)
-                    caixaP=0;
-                else if (P%10>0){
+                if (P%10>0){
                     caixaP=1;
                     M+=P/10;
                 }
@@ -85,11 +83,11 @@ import java.util.ArrayList;
 
         double preco_frete;
 
-        public double preçoTotalCompra() {
+        public double precoTotalCompra() {
             double valorTotal = 0;
 
-            for (int i = 0; i < carrinho.size(); i++) {
-                valorTotal += carrinho.get(i).getPreco();
+            for (Produto aCarrinho : carrinho) {
+                valorTotal += aCarrinho.getPreco();
             }
             valorTotal += preco_frete;
             return valorTotal;
@@ -104,12 +102,12 @@ import java.util.ArrayList;
         }
 
         public void pagar(int codigo_do_pedido, double dinheiro) {
-            double preco = preçoTotalCompra();
+            double preco = precoTotalCompra();
             if (preco <= dinheiro) {
                 System.out.println("Pagamento efetuado com sucesso!");
                 pedidos.get(codigo_do_pedido).setStatus(StatusPedido.PAGAMENTO_EFETUADO);
                     carrinho.clear();
-            } else if (preçoTotalCompra() < dinheiro) {
+            } else if (precoTotalCompra() < dinheiro) {
                 System.out.println("Pagamento não autorizado");
             }
         }
@@ -147,7 +145,7 @@ import java.util.ArrayList;
             this.telefone = telefone;
         }
 
-        public void setEndereco(Logradouro endereço) {
+        public void setEndereco(Logradouro endereco) {
             this.endereco = endereco;
         }
         public ArrayList <Pedido> getPedidos() {

@@ -10,11 +10,8 @@ public class Main {
 
         loja.AdicionaProdutoEstoque(camiseta_azul);
 
-        Logradouro juliaendereço = new Logradouro("mato grosso", "alameda", "RS", "Porto Alegre", "38576384", 1192);
-        Client Julia = new Client("Julia", "34998016787", "13144435643", juliaendereço);
-
-        loja.cadastraCliente(Julia);
-
+        Logradouro juliaendereco = new Logradouro("mato grosso", "alameda", "RS", "Porto Alegre", "38576384", 1192);
+        Client Julia = new Client("Julia", "34998016787", "13144435643", juliaendereco);
 
         Julia.adicionarAoCarrinho( camiseta_azul,13);
         Julia.adicionarAoCarrinho(camiseta_rosa,6);
@@ -27,6 +24,6 @@ public class Main {
         Julia.pagar(0, 480.00);
 
 
-        System.out.println(Julia.getPedidos().get(0).getProdutos());
+        System.out.println(Julia.getPedidos().get(0).getProdutos1());
     }
 }

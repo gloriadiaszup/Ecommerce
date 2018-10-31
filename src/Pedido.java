@@ -2,21 +2,19 @@ import java.util.ArrayList;
 
 public class Pedido {
 
-    private ArrayList<Produto> produtos = new ArrayList<Produto>();
+    private ArrayList<Produto> produtos = new ArrayList<>();
+    private ArrayList<Produto> produtos1 = new ArrayList<>();
     private StatusPedido status;
 
-    public Pedido( ArrayList<Produto> produtos, StatusPedido status) {
+    public Pedido( ArrayList<Produto> produtos, StatusPedido status){
 
-        this.produtos = (ArrayList<Produto>) produtos.clone();
+        produtos1.addAll(produtos);
         this.status = status;
     }
 
-    public ArrayList<Produto> getProdutos() {
-        return produtos;
-    }
 
-    public void setProdutos(ArrayList<Produto> produtos) {
-        this.produtos = produtos;
+    public ArrayList <Produto> getProdutos1() {
+        return produtos1;
     }
 
     public StatusPedido getStatus() {
