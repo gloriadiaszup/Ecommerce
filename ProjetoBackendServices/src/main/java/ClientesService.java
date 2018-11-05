@@ -1,6 +1,5 @@
-import java.util.ArrayList;
 
-public class ClientesService {
+class ClientesService {
 
     public void adicionarAoCarrinho(Client cliente, Produto produto, int quantidade) {
 
@@ -18,9 +17,8 @@ public class ClientesService {
         }
     }
 
-    double preco_frete;
 
-    public double precoTotalCompra(Client cliente) {
+    private double precoTotalCompra(Client cliente) {
         double valorTotal = 0;
 
         for (int i = 0; i < cliente.getCarrinho().size(); i++) {
