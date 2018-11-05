@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Pedido {
 
-    private ArrayList<Produto> produtos = new ArrayList<>();
-    private ArrayList<Produto> produtos1 = new ArrayList<>();
+    private ArrayList<Produto> produtos = new ArrayList<Produto>();
+    private ArrayList<Produto> produtos1 = new ArrayList<Produto>();
     private StatusPedido status;
 
     public Pedido( ArrayList<Produto> produtos, StatusPedido status){

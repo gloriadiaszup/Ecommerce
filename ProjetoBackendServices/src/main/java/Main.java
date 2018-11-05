@@ -17,5 +17,6 @@ public class Main {
            gloriaService.adicionarAoCarrinho(gloria, mouse, 1);
            gloriaService.adicionarAoCarrinho(gloria, teclado, 1);
 
+
     }
 }
