@@ -10,6 +10,7 @@ import java.util.ArrayList;
         private ArrayList<Produto> carrinho = new ArrayList<Produto>();
         private ArrayList<Pedido> pedidos = new ArrayList <Pedido>();
         private final String cep_loja = "38408587";
+        private double preco_frete;
 
 
         public Client(String nome, String telefone, String cpf, Logradouro endereco) {
@@ -73,5 +74,12 @@ import java.util.ArrayList;
             return cep_loja;
         }
 
+        public double getPreco_frete() {
+            return preco_frete;
+        }
+
+        public void setPreco_frete(double preco_frete) {
+            this.preco_frete = preco_frete;
+        }
     }
 

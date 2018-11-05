@@ -26,21 +26,19 @@ public class ClientesService {
         int caixaM = 0;
         int caixaG = 0;
         double preco_frete;
-        if (cep == cliente.getCep_loja()) {
+        if (cep.equals(cliente.getCep_loja())) {
             preco_frete = 0;
         } else {
             for (int i = 0; i < cliente.getCarrinho().size(); i++) {
-                if (cliente.getCarrinho().get(i).getTamanho() == "P")
+                if (cliente.getCarrinho().get(i).getTamanho().equals("P"))
                     P++;
-                if (cliente.getCarrinho().get(i).getTamanho() == "M")
+                if (cliente.getCarrinho().get(i).getTamanho().equals("M"))
                     M++;
-                if (cliente.getCarrinho().get(i).getTamanho() == "G")
+                if (cliente.getCarrinho().get(i).getTamanho().equals("G"))
                     G++;
 
             }
-            if (P % 10 == 0 && P / 10 == 0)
-                caixaP = 0;
-            else if (P % 10 > 0) {
+            if (P % 10 > 0) {
                 caixaP = 1;
                 M += P / 10;
             }
@@ -56,15 +54,13 @@ public class ClientesService {
         return preco_frete;
     }
 
-    double preco_frete;
-
-    public double preçoTotalCompra(Client cliente) {
+    public double precoTotalCompra(Client cliente) {
         double valorTotal = 0;
 
         for (int i = 0; i < cliente.getCarrinho().size(); i++) {
             valorTotal += cliente.getCarrinho().get(i).getPreco();
         }
-        valorTotal += preco_frete;
+        valorTotal += cliente.getPreco_frete();
         return valorTotal;
     }
 
@@ -78,12 +74,12 @@ public class ClientesService {
     }
 
     public void pagar(Client cliente, int codigo_do_pedido, double dinheiro) {
-        double preco = preçoTotalCompra(cliente);
+        double preco = precoTotalCompra(cliente);
         if (preco <= dinheiro) {
             System.out.println("Pagamento efetuado com sucesso!");
             cliente.getPedidos().get(codigo_do_pedido).setStatus(StatusPedido.PAGAMENTO_EFETUADO);
             cliente.getCarrinho().clear();
-        } else if (preçoTotalCompra(cliente) < dinheiro) {
+        } else if (precoTotalCompra(cliente) < dinheiro) {
             System.out.println("Pagamento não autorizado");
         }
     }
