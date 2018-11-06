@@ -1,0 +1,3 @@
+public enum StatusPedido {
+    AGUARDANDO_PAGAMENTO, PAGAMENTO_EFETUADO
+}
