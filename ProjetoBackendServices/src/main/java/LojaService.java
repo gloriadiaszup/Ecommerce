@@ -1,6 +1,5 @@
 
-
-public class LojaService {
+    class LojaService {
 
     public void AdicionaProdutoEstoque(Loja loja,  Produto produto)
 

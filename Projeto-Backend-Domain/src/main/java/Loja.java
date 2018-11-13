@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Loja
+    class Loja
 {
     private String nome="";
     private String cnpj="989.556.567/0001-35";

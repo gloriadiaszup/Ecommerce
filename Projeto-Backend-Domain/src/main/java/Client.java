@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-    public class Client {
+    class Client {
 
 
         private String nome;
@@ -9,7 +9,6 @@ import java.util.ArrayList;
         private Logradouro endereco;
         private ArrayList<Produto> carrinho = new ArrayList<Produto>();
         private ArrayList<Pedido> pedidos = new ArrayList <Pedido>();
-        private final String cep_loja = "38408587";
         private double preco_frete;
 
 
@@ -70,16 +69,13 @@ import java.util.ArrayList;
 
         public void setNome(String nome) { this.nome = nome; }
 
-        public final String getCep_loja() {
-            return cep_loja;
-        }
-
         public double getPreco_frete() {
             return preco_frete;
         }
 
         public void setPreco_frete(double preco_frete) {
             this.preco_frete = preco_frete;
+
         }
     }
 

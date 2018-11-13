@@ -1,5 +1,5 @@
 
-public class ClientesService {
+class ClientesService {
 
     public void adicionarAoCarrinho(Client cliente, Produto produto, int quantidade) {
 
@@ -17,7 +17,8 @@ public class ClientesService {
         }
     }
 
-    public double calculaFrete(Client cliente, String cep) {
+    public double calculaFrete(Client cliente, Loja loja, String cep)
+    {
         int P = 0;
         int G = 0;
         int M = 0;
@@ -26,35 +27,36 @@ public class ClientesService {
         int caixaM = 0;
         int caixaG = 0;
         double preco_frete;
-        if (cep.equals(cliente.getCep_loja())) {
+        if (cep.equals(loja.getEndereco().getCEP()))
+        {
             preco_frete = 0;
-        } else {
-            for (int i = 0; i < cliente.getCarrinho().size(); i++) {
-                if (cliente.getCarrinho().get(i).getTamanho().equals("P"))
+        } else{
+            for(int i=0;i<cliente.getCarrinho().size();i++){
+                if(cliente.getCarrinho().get(i).getTamanho().equals("P"))
                     P++;
-                if (cliente.getCarrinho().get(i).getTamanho().equals("M"))
+                if(cliente.getCarrinho().get(i).getTamanho().equals("M"))
                     M++;
-                if (cliente.getCarrinho().get(i).getTamanho().equals("G"))
+                if(cliente.getCarrinho().get(i).getTamanho().equals("G"))
                     G++;
 
             }
-            if (P % 10 > 0) {
-                caixaP = 1;
-                M += P / 10;
+            if (P%10>0){
+                caixaP=1;
+                M+=P/10;
             }
-            if (M % 5 > 0) {
+            if (M%5>0) {
                 caixaM = 1;
-                caixaG = M / 5;
+                caixaG = M/5;
             }
-            caixaG += G;
+            caixaG+=G;
 
 
-            preco_frete = (caixaP * 5) + (caixaM * 20) + (caixaG * 25);
+            preco_frete = (caixaP*5) + (caixaM*20) + (caixaG*25);
         }
         return preco_frete;
     }
 
-    public double precoTotalCompra(Client cliente) {
+    private double precoTotalCompra(Client cliente) {
         double valorTotal = 0;
 
         for (int i = 0; i < cliente.getCarrinho().size(); i++) {
@@ -63,8 +65,7 @@ public class ClientesService {
         valorTotal += cliente.getPreco_frete();
         return valorTotal;
     }
-
-    static private int codigo = 0;
+    static private int codigo=0;
 
     public void comprar(Client cliente) {
 
